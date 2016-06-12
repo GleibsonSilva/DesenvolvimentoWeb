@@ -19,7 +19,7 @@ public class ImcControler extends HttpServlet {
 	}
 	
 	private float toFloat(HttpServletRequest req, String param, String padrao){
-		return Integer.parseFloat(valor(req, param, padrao));
+		return Float.parseFloat(valor(req, param, padrao));
 	}
 	
 	@Override
@@ -27,6 +27,7 @@ public class ImcControler extends HttpServlet {
 		float peso = toFloat(req, "peso", "0");
 		float altura = toFloat(req, "altura", "0");
 		float resultadoCalculo = ImcModel.calcularImc(peso, altura);
-		req.setAtribute("resultado");
+		req.setAttribute("resultado", resultadoCalculo);
+		req.getRequestDispatcher("ImcView.jsp").forward(req, resp);
 	}
 }
