@@ -18,7 +18,7 @@ public class ImcControler extends HttpServlet {
 		return result;
 	}
 	
-	private int toFloat(HttpServletRequest req, String param, String padrao){
+	private float toFloat(HttpServletRequest req, String param, String padrao){
 		return Integer.parseFloat(valor(req, param, padrao));
 	}
 	
