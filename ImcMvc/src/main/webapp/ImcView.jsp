@@ -45,7 +45,7 @@
 	<br>
 	<div class="container centro">
 		<div class="col s6 m6 l6">
-			<form action="ImcView.jsp" method="post">
+			<form action="imcgleibson">
 				<div class="row">
 					<div class="input-field col">
 						<h2 class="center blue-text prefix">
@@ -84,9 +84,9 @@
 	</form>
 	<br>
 	<br>
-	<form action="imc.jsp" method="post">
+	<form action="imcgleibson">
 		<div class="center">
-			<a href="#" id="calcular" class="btn-large waves-effect waves-light blue" onclick="imprimirIMC(${resultado})">Calcular</a> 
+			<a href="#" id="calcular" type="submit" class="btn-large waves-effect waves-light blue" onclick="imprimirIMC(${resultado})">Calcular</a> 
 			&nbsp &nbsp	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
 			<a href="#" id="limpar"	type="reset" class="btn-large waves-effect waves-light blue" onclick="limpar()">Limpar</a>
 		</div>
